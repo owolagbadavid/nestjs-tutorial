@@ -24,7 +24,7 @@ export class CustomersController {
   @Get(':id')
   getCustomer(@Param('id', ParseIntPipe) id: number) {
     const customer = this.customersService.findCustomerById(id);
-    if (!customer) throw new NotFoundException();
+    if (!customer) throw new NotFoundException('Customer not found');
     return customer;
   }
 

@@ -25,10 +25,16 @@ export class CustomerModule implements NestModule {
           next();
         },
       )
-      .exclude({
-        path: 'api/customers/create',
-        method: RequestMethod.POST,
-      })
-      .forRoutes(CustomerModule);
+      .exclude(
+        {
+          path: '/customers',
+          method: RequestMethod.GET,
+        },
+        {
+          path: '/customers/create',
+          method: RequestMethod.POST,
+        },
+      )
+      .forRoutes(CustomersController);
   }
 }
