@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
 import { dataSourceOptions } from './typeorm/datasource';
+import { PaymentsModule } from './payments/payments.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { dataSourceOptions } from './typeorm/datasource';
     UsersModule,
     TypeOrmModule.forRoot(dataSourceOptions),
     AuthModule,
+    PaymentsModule,
   ],
   controllers: [],
   providers: [],
