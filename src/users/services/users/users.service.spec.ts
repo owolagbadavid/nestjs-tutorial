@@ -4,7 +4,6 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { User } from '../../../typeorm';
 import { Repository } from 'typeorm';
 import * as bcryptUtils from '../../../utils/bcrypt';
-import e from 'express';
 
 describe('UsersService', () => {
   let service: UsersService;
