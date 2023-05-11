@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+/web-sockets/node_modules
+/web-sockets/dist
 
 # Logs
 logs
